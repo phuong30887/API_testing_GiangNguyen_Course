@@ -34,7 +34,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.8.1</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -118,7 +117,7 @@
                         </property>
                     </systemProperties>
                     <systemPropertyVariables>
-                        <env>local</env>
+                        <env>qa</env>
                     </systemPropertyVariables>
                 </configuration>
                 <dependencies>

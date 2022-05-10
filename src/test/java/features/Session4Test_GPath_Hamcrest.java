@@ -98,7 +98,7 @@ public class Session4Test_GPath_Hamcrest {
                 .post("https://postman-echo.com/post")
                 .path("json.lotto.lottoId")
         ;
-        System.out.println("Lotto ID: " + lottoId);
+//        System.out.println("Lotto ID: " + lottoId);
 
         assertThat(lottoId, equalTo(4));
     }
@@ -144,7 +144,7 @@ public class Session4Test_GPath_Hamcrest {
                 .post("https://postman-echo.com/post")
                 .asString();
         List<String> author = JsonPath.from(res).getList("json.store.book.findAll {it}.author");
-        author.forEach(System.out::println);
+//        author.forEach(System.out::println);
         assertThat(author, hasItems("Nigel Rees", "Evelyn Waugh"));
     }
 
@@ -155,7 +155,7 @@ public class Session4Test_GPath_Hamcrest {
                 .post("https://postman-echo.com/post")
                 .asString();
         List<String> author = JsonPath.from(res).getList("json.store.book.findAll {it.price == 8.95}.author");
-        author.forEach(System.out::println);
+//        author.forEach(System.out::println);
         everyItem(equalTo("Nigel Rees"));
     }
 
